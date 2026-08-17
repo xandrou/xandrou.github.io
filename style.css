@@ -490,3 +490,68 @@ a {
   }
 
 }
+
+/* PRESENTATIONS */
+
+.presentations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.presentation-card {
+  padding: 30px;
+
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  background: var(--card);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.presentation-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.presentation-number {
+  margin: 0 0 25px;
+
+  color: var(--accent);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.presentation-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 1.5rem;
+}
+
+.presentation-card > p:not(.presentation-number) {
+  color: var(--text-muted);
+}
+
+.presentation-link {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: var(--accent);
+
+  font-weight: 600;
+}
+
+.presentation-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .presentations-grid {
+    grid-template-columns: 1fr;
+  }
+}

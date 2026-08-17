@@ -555,3 +555,10 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.pdf-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
